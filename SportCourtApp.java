@@ -74,7 +74,6 @@ public class SportCourtApp extends Application {
             courts.add(new Court("PCK" + String.format("%02d", i), 
                                "Pickleball Court " + i, "Pickleball", "Available"));
         }
-        // Ping Pong - 10 courts (FIXED: Changed from "PingPong" to "Ping Pong")
         for (int i = 1; i <= 10; i++) {
             courts.add(new Court("PNG" + String.format("%02d", i), 
                                "Ping Pong Table " + i, "Ping Pong", "Available"));
@@ -449,13 +448,12 @@ public class SportCourtApp extends Application {
         sportsGrid.setVgap(25);
         sportsGrid.setAlignment(Pos.CENTER);
 
-        // FIXED: Use consistent naming - "Ping Pong" with space
         String[][] sports = {
             {"🏸", "Badminton", "RM14-24/hr", "10 courts", "#667eea"},
             {"⚽", "Futsal", "RM70-100/hr", "2 courts", "#f093fb"},
             {"🎾", "Tennis", "RM50-70/hr", "4 courts", "#4facfe"},
             {"🏓", "Pickleball", "RM50-70/hr", "4 courts", "#f5576c"},
-            {"🏓", "Ping Pong", "RM10-14/hr", "10 courts", "#2ecc71"}  // Changed from "Ping Pong" to match database
+            {"🏓", "Ping Pong", "RM10-14/hr", "10 courts", "#2ecc71"}
         };
 
         int col = 0, row = 0;
@@ -534,6 +532,7 @@ public class SportCourtApp extends Application {
         // Date Selection
         Label dateLabel = new Label("📅 Select Date");
         dateLabel.setFont(Font.font("Arial", FontWeight.BOLD, 16));
+        dateLabel.setTextFill(Color.BLACK);
         
         DatePicker datePicker = new DatePicker();
         datePicker.setValue(LocalDate.now());
@@ -550,6 +549,7 @@ public class SportCourtApp extends Application {
         // Court Selection
         Label courtLabel = new Label("🏸 Select Court");
         courtLabel.setFont(Font.font("Arial", FontWeight.BOLD, 16));
+        courtLabel.setTextFill(Color.BLACK);
 
         ComboBox<Court> courtCombo = new ComboBox<>();
         for (Court court : courts) {
@@ -567,9 +567,10 @@ public class SportCourtApp extends Application {
         courtCombo.setPrefWidth(540);
         courtCombo.setStyle("-fx-font-size: 14px; -fx-padding: 10;");
 
-        // Duration Selection (moved before time selection)
+        // Duration Selection 
         Label durationLabel = new Label("⏱ Duration (hours)");
         durationLabel.setFont(Font.font("Arial", FontWeight.BOLD, 16));
+        durationLabel.setTextFill(Color.BLACK);
 
         Spinner<Integer> durationSpinner = new Spinner<>(1, 8, 1);
         durationSpinner.setPrefWidth(540);
@@ -578,6 +579,7 @@ public class SportCourtApp extends Application {
         // Time Selection
         Label timeLabel = new Label("🕐 Select Time (9 AM - 2 AM)");
         timeLabel.setFont(Font.font("Arial", FontWeight.BOLD, 16));
+        timeLabel.setTextFill(Color.BLACK);
 
         ComboBox<String> timeCombo = new ComboBox<>();
         timeCombo.setPromptText("Choose start time");
