@@ -34,8 +34,9 @@ The project follows a modular Object-Oriented Programming (OOP) design to ensure
 | **Schedule**       | Manages time slots for courts                                           | Muhammad Hafiz Hamzah Bin Fansuri         |
 | **Admin**          | Administrator operations and management                                 | Muhammad Hafiz Hamzah Bin Fansuri         |
 | **SportCentre**    | Represents the entire sports facility                                    | Abdul Hadi Bin Zawawi                      |
-| **DataManager**    | Handles file operations and data persistence                             | Abdul Hadi Bin Zawawi                      |
-| **BookingValidator** | Validates bookings and prevents conflicts                              | Group Collaboration                        |
+| **DataManager**    | Handles file operations and data persistence                             | Muhammad Hafiz Hamzah Bin Fansuri                     |
+| **BookingValidator** | Validates bookings and prevents conflicts                              | Muhammad Zamir Fikri Bin Mohd Zamri                        |
+| **SportCourtApp** | Main JavaFX application entry point, GUI controller, screen navigation    | Abdul Hadi Bin Zawawi                        |
 
 ---
 
